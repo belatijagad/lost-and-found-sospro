@@ -4,13 +4,15 @@ import Head from "next/head";
 
 export default function Authentication() {
     return(
-        <div>
-            <Head>
-                <title>Login</title>
-            </Head>
-            <Navbar />
-            Ini halaman login
-            <Footer />
-        </div>
+    <>
+    <Head>
+        <title>Login</title>
+    </Head>
+    <Navbar />
+    <div className="container mx-auto">
+        Ini halaman login
+    </div>
+    <Footer />
+    </>
     )
 }

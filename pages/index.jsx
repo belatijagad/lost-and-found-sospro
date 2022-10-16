@@ -5,7 +5,7 @@ import Hero from './components/hero'
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div>
       <Head>
         <title>Lost and Found Fasilkom UI</title>
         <meta name="description" content="Website social project House of Country" />
