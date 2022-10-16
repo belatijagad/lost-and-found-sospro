@@ -4,9 +4,20 @@ import Navbar from "./components/navbar";
 import Button from "./components/button";
 
 import { useSession } from "next-auth/react";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Lost() {
   const {data: session} = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!session){
+      setTimeout(() =>{
+          router.push("/")
+      }, 3000)
+    }
+  }, [])
   if (session){
     return (
       <>
