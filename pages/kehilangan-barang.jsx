@@ -6,11 +6,13 @@ import Button from "./components/button";
 import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import FormHilang from "./components/formHilang";
 
 export default function Lost() {
   const {data: session} = useSession();
   const router = useRouter();
 
+  // Redirect pengguna ke halaman utama jika belum login
   useEffect(() => {
     if (!session){
       setTimeout(() =>{
@@ -18,6 +20,7 @@ export default function Lost() {
       }, 3000)
     }
   }, [])
+
   if (session){
     return (
       <>
